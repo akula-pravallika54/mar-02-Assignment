@@ -1,0 +1,47 @@
+
+A=[]
+m=int(input('enter row:'))
+n=int(input('enter column:'))
+for i in range(m):
+    row=[]
+    for j in range(n):
+        row.append(int(input()))
+    A.append(row)
+print(A)        
+B=[]
+m=int(input('enter row:'))
+n=int(input('enter column:'))
+for i in range(m):
+    row=[]
+    for j in range(n):
+        row.append(int(input()))
+    B.append(row)
+print(B)    
+c=[[0,0],[0,0]]
+for i in range(len(A)):
+    for j in range(len(B[0])):
+        for k in range(len(B)):
+            c[i][j]=c[i][j]+A[i][k]*B[k][j]
+print('result:')
+for i in range(m):
+    for j in range(n):
+        print(c[i][j],end=' ')
+    print()    
+OUTPUT:
+enter row:2
+enter column:2
+1
+1
+1
+1
+[[1,1],[1,1]]
+enter row:2
+enter column:2
+1
+2
+1
+1
+[[1,2],[1,1]]
+result:
+2 3
+2 3
